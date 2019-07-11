@@ -2165,15 +2165,6 @@ vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto|f35ad5c8ade4f36caa9a71dff2
 vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
 vendor/etc/sensors/sns_reg_config|891e6e552b64c29b61744dd53ea373ea0ce0aa40
 
-# SSR
-vendor/bin/ssr_diag
-vendor/bin/ssr_setup
-vendor/bin/subsystem_ramdump
-vendor/lib/libSubSystemShutdown.so
-vendor/lib/libsubsystem_control.so
-vendor/lib64/libSubSystemShutdown.so
-vendor/lib64/libsubsystem_control.so
-
 # Thermal - from laurel_sprout V12.0.26.0.RFQMIXM
 vendor/bin/thermal-engine|c0f7dc730227266d9fbe01a4c730a1ee91a60254
 vendor/etc/thermal-engine-high.conf|646948a5d3a378feb1595c63c578407af6f70b90
