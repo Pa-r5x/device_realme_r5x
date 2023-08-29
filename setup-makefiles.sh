@@ -26,6 +26,25 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+       "device/realme/r5x",
+       "vendor/qcom/common/vendor/gps-legacy",
+       "hardware/qcom/display",
+       "hardware/qcom/display/gralloc",
+       "hardware/qcom/display/libdebug",
+       "vendor/qcom/common/vendor/adreno-r",
+       "vendor/qcom/common/vendor/display/4.14",
+       "vendor/qcom/common/vendor/media-legacy",
+       "vendor/qcom/common/vendor/perf",
+       "vendor/qcom/common/vendor/wlan",
+       "vendor/qcom/opensource/dataservices",
+       "vendor/qcom/opensource/data-ipa-cfg-mgr",
+       "vendor/qcom/common/system/telephony",
+       "vendor/realme/r5x",
+EOF
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 
