@@ -38,3 +38,4 @@ type sysfs_camera, fs_type, sysfs_type;
 
 type public_adsprpcd_file, file_type;
 
+type sysfs_torch, sysfs_type, fs_type;

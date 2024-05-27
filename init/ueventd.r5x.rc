@@ -20,3 +20,8 @@
 # nfc
 /dev/cxd224x-i2c          0660    nfc         nfc
 /dev/cxd22xx-i2c          0660    nfc         nfc
+
+# torch control
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:switch_0 brightness 0660 cameraserver camera
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:torch_0 brightness 0660 cameraserver camera
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:torch_1 brightness 0660 cameraserver camera
