@@ -34,7 +34,10 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener
+    libvolumelistener \
+    libaudioroute.vendor \
+    libprocessgroup.vendor \
+    libstagefright_softomx_plugin.vendor
 
 PRODUCT_PACKAGES += \
     libbatterylistener \
@@ -89,7 +92,9 @@ PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     libcamera2ndk_vendor \
-    libstdc++_vendor
+    libstdc++_vendor \
+    libpng.vendor \
+    libutilscallstack.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -360,7 +365,12 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     rild \
     libjson \
-    librmnetctl
+    librmnetctl \
+    libion.vendor \
+    libnetutils.vendor \
+    libcurl.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
