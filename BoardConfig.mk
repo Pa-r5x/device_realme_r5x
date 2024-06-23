@@ -72,7 +72,10 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 4.0
 
 # HIDL
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifests/manifest.xml
+DEVICE_MANIFEST_FILE := \
+    $(DEVICE_PATH)/configs/manifests/manifest.xml \
+    hardware/qcom/media/conf_files/sm6150/c2_manifest.xml
+
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/manifests/framework_compatibility_matrix.xml
 ODM_MANIFEST_SKUS += nfc_ese
 ODM_MANIFEST_NFC_ESE_FILES := $(DEVICE_PATH)/configs/manifests/manifest_nfc_ese.xml
@@ -167,6 +170,7 @@ TARGET_BOARD_PLATFORM := trinket
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/props/system.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/props/system_ext.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/props/product.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/props/vendor.prop
 
