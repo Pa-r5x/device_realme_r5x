@@ -348,6 +348,10 @@ PRODUCT_PACKAGES += \
 BOARD_SHIPPING_API_LEVEL := 30
 
 # Wifi
+PRODUCT_PACKAGES += \
+     firmware_WCNSS_qcom_cfg.ini_symlink \
+     firmware_wlan_mac.bin_symlink
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
