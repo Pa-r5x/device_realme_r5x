@@ -75,16 +75,8 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.bluetooth.bqr.event_mask=14 \
     persist.bluetooth.bqr.min_interval_ms=500
 
-# Binder
-PRODUCT_PACKAGES += \
-    libhwbinder \
-    libhwbinder.vendor \
-    libhidltransport \
-    libhidltransport.vendor
-
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hidl.memory.block@1.0.vendor \
@@ -172,25 +164,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 # FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio \
-    qcom.fmradio.xml
-
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
-
-# Freeform Windows
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
-
-# fwk-detect
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti \
-    libqti_vndfwk_detect \
-    libvndfwk_detect_jni.qti.vendor \
-    libqti_vndfwk_detect.vendor
+BOARD_HAVE_QCOM_FM := true
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -229,20 +203,6 @@ PRODUCT_COPY_FILES += \
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so
-
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0.vendor
-
-# HotwordEnrollement app permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
 # Init
 PRODUCT_PACKAGES += \
@@ -319,7 +279,6 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     android.system.net.netd@1.1.vendor
 
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
@@ -369,19 +328,7 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayR5x \
     WifiOverlayR5x \
     FrameworksOverlayR5x \
-    TetheringConfigOverlayR5x \
-    ApertureOverlay
-
-# Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-full.so \
-    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite.so
+    TetheringConfigOverlayR5x
 
 # PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
 PRODUCT_SHIPPING_API_LEVEL := 28
@@ -404,8 +351,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml
 
 # RIL
@@ -419,29 +364,13 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     rild \
     libjson \
-    librmnetctl \
-    libprotobuf-cpp-full
-
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-hidl-wrapper-prd \
-    qti_telephony_hidl_wrapper_prd.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
+    librmnetctl
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
-
-# Seccomp policy
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -463,10 +392,6 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
-# Improve performance
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.mock
@@ -477,14 +402,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map.conf \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal.conf
 
-# Speed profile services and wifi-service to reduce RAM and storage.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-
 # VNDK
 BOARD_SHIPPING_API_LEVEL := 30
 
 PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so \
+    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -492,7 +415,6 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
-    libwpa_client \
     wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf
