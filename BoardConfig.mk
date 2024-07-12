@@ -60,11 +60,7 @@ SOONG_CONFIG_rmnetctl += \
 SOONG_CONFIG_rmnetctl_old_rmnet_data := true
 
 # Display
-TARGET_USES_HWC2 := true
-TARGET_USES_DRM_PP := true
-TARGET_USES_GRALLOC1 := true
 TARGET_USES_ION := true
-USE_OPENGL_RENDERER := true
 TARGET_SCREEN_DENSITY := 440
 
 # GPS
@@ -180,7 +176,6 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Releasetools
