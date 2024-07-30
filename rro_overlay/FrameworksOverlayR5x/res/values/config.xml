@@ -194,7 +194,6 @@
 
     <!-- Enable overlay for all location components. -->
     <bool name="config_enableNetworkLocationOverlay" translatable="false">false</bool>
-    <string name="config_networkLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
 
     <!-- Enable doze mode -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
