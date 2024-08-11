@@ -131,7 +131,7 @@ persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
 
 # Display
-debug.sf.enable_gl_backpressure=1
+debug.sf.enable_gl_backpressure=0
 ro.vendor.display.cabl=0
 ro.config.avoid_gfx_accel=true
 vendor.display.disable_skip_validate=1
