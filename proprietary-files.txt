@@ -2517,35 +2517,42 @@ vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libscvePanorama.so
 vendor/lib64/libscvePanorama_lite.so
 
-# Sensor
-vendor/bin/hw/android.hardware.sensors@2.0-service
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-vendor/bin/sensors.qti
-vendor/etc/init/android.hardware.sensors@2.0-service.rc
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/etc/sensors/hals.conf
-vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib/android.hardware.sensors@2.0-impl.so
-vendor/lib/libsensorcal.so
-vendor/lib/libsensorslog.so
-vendor/lib/libssc.so
-vendor/lib/libssc_default_listener.so
-vendor/lib/sensors.ssc.so
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/android.hardware.sensors@2.0-impl.so
-vendor/lib64/libsensorcal.so
-vendor/lib64/libsensorslog.so
-vendor/lib64/libsns_fastRPC_util.so
-vendor/lib64/libsns_low_lat_stream_stub.so
-vendor/lib64/libsnsdiaglog.so
-vendor/lib64/libssc.so
-vendor/lib64/libssc_default_listener.so
-vendor/lib64/sensors.ssc.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+# Sensors - from RMX2050_11_C.10
+vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
+vendor/bin/sensors.qti|9bc2951cb76e6695830d58f0e0ceb66b0aca5f64
+vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
+vendor/etc/init/init.vendor.sensors.rc|76af799ee1c3b4a7fd0a29f1cb133e520e9721f2
+vendor/etc/init/vendor.sensors.qti.rc|f34fc966af816b50f10ae7520b33863961a14478
+vendor/lib/libsensorcal.so|a2c57e1c171a88c6217d56db4004db0dd7ff8be7
+vendor/lib/libsensorslog.so|64b197386e364647ebd61f0c7350f5973cb8ae94
+vendor/lib/libsns_fastRPC_util.so|f87bb0d1b85e35491f2ae45be091fec41b39c6a4
+vendor/lib/libsnsapi.so|b354a31b91e71857b9a4ec9fc6a01e805755b540
+vendor/lib/libsnsdiaglog.so|6d452a12068a363c803a7b6a32208404583cd3f8
+vendor/lib/libsns_low_lat_stream_stub.so|1e57aad2afc4422878e80ff46cedd668a62097d1
+vendor/lib/libssc.so|9f3c492ec44dd40695bd62b94fc221bee814d6c5
+vendor/lib/libssc_default_listener.so|def819068b7b54c6d31f3fc81deb5c7adae9ce2f
+vendor/lib/sensors.ssc.so|f4a74898706c071d65b7e8e9308870777d3e5734
+vendor/lib64/libsensorcal.so|0e79cc13746e5b37296d47b665ad54a720b2f2bd
+vendor/lib64/libsensorslog.so|edcdb60ef262024efae67595d118d3c8eb405cc4
+vendor/lib64/libsns_fastRPC_util.so|09896f58457ca3fadf127359133aa43b9f8eea0f
+vendor/lib64/libsnsapi.so|7a5603406f6585f102af99bb0040ca6a93ff7df9
+vendor/lib64/libsnsdiaglog.so|53ca60e6bbb739f7db83493a74da186b7cb7eccc
+vendor/lib64/libsns_low_lat_stream_stub.so|69ccf6ea1bdc75c6a15c51df88680092ebf7117e
+vendor/lib64/libssc.so|1ac6334be3d748aabf173b44b5c76d3ceca97423
+vendor/lib64/libssc_default_listener.so|d4dffb70de26f4ffe1a9c467b9d5f6c8cfaad045
+vendor/lib64/sensors.ssc.so|ae98f993b5ee1dd9275893135d1da8b8ac93c660
 
-# Sensor configs
+# Sensor Calibrate - from RMX2050_11_C.10
+system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar|eaef4d80e7ba18c4ab858982c52c44caf5a38717
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service|475fab7f88c20b9cf3f470e337ed5fc576815774
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml|1da4413d851427006472e4251cd20d397052d41f
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc|449c88778d880c0d47cc4d651fc60c4c424c1a3f
+vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so|978c1a1fa2863ed5c12b56a4b4e615e3ed7b7f97
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|9150ae9b2b4647a327da169b83ff91cae3f997b3
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so|d611479bbf9e13b00a938f3a946e2bd78956dd76
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|f45c18014542796af2e2be301bb0dd9100c7106e
+
+# Sensors configs
 vendor/etc/sensors/config/ak991x_0.json
 vendor/etc/sensors/config/bmi160_0.json
 vendor/etc/sensors/config/icm4x6xx_0.json
