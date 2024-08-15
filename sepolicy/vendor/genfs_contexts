@@ -39,6 +39,18 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.q
 genfscon proc /qcom_flash         u:object_r:proc_flash:s0
 genfscon proc /qcom_flash1        u:object_r:proc_flash:s0
 
+# sysfs wakeup
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/active_count                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/active_time_ms              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/event_count                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/expire_count                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/last_change_ms              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/max_time_ms                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/name                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/prevent_suspend_time_ms     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/total_time_ms               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/wakeup/wakeup[0-101][0-101]/wakeup_count                u:object_r:sysfs_wakeup:s0
+
 # vibrate
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,vibrator@5700/leds/vibrator/activate                 u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,vibrator@5700/leds/vibrator/state                    u:object_r:sysfs_leds:s0
