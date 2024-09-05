@@ -365,6 +365,9 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.mock
 
 # VNDK
+PRODUCT_PACKAGES += \
+    libcrypto-v33
+
 BOARD_SHIPPING_API_LEVEL := 30
 
 PRODUCT_COPY_FILES += \
