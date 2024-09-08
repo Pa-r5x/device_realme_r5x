@@ -56,6 +56,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
+TARGET_PROVIDES_AUDIO_HAL := true
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbluetooth_audio_session
