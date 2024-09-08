@@ -405,6 +405,9 @@ PRODUCT_PACKAGES += \
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
+# Update
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
+
 # VNDK
 PRODUCT_PACKAGES += \
     libcrypto-v33
