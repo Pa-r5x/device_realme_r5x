@@ -278,6 +278,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.mock
 
+# Update
+AB_OTA_UPDATER := false
+
 # VNDK
 BOARD_SHIPPING_API_LEVEL := 30
 
