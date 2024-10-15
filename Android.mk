@@ -135,10 +135,4 @@ $(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINKS)
 
-# Kernel headers
-$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr: $(wildcard device/realme/r5x-kernel/kernel-headers/*)
-	rm -rf $@
-	mkdir -p $@/include
-	cp -a device/realme/r5x-kernel/kernel-headers/. $@/include
-
 endif
