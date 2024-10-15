@@ -88,6 +88,12 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_OFFSET := 0x00008000
+TARGET_KERNEL_LLVM_BINUTILS := false
+BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_KERNEL_SOURCE := kernel/realme/r5x
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CONFIG := vendor/RMX1911_defconfig
+TARGET_KERNEL_OPTIONAL_LD := true
 
 BOARD_KERNEL_CMDLINE := \
       console=ttyMSM0,115200n8 \
@@ -105,12 +111,6 @@ BOARD_KERNEL_CMDLINE := \
       androidboot.boot_devices=soc/4744000.sdhci \
       androidboot.android_dt_dir=/non-existent \
       nosdcardfs
-
-# Kernel (Prebuilt)
-TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_KERNEL_ARCH := arm64
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/Image.gz-dtb
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
 # Media
 TARGET_DISABLED_UBWC := true
@@ -178,6 +178,7 @@ TARGET_USES_INTERACTION_BOOST := true
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
