@@ -2401,13 +2401,15 @@ vendor/lib64/libqmiservices.so
 product/etc/permissions/embms.xml
 product/framework/embmslibrary.jar
 
+# Radio (system) - from LA.QSSI.15.0.r1
+system_ext/framework/qti-telephony-common.jar|761333c1e93063c493c46658fabc74275a978ab5
+
 # Radio (system) - from LA.QSSI.14.0.r1-15800-qssi.0
 system_ext/app/DeviceInfo/DeviceInfo.apk|9151091e029c31228100a4c471b5a499acdf8129
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|6649715fb5d956ca7e92a747dc6e73a24f3c025e
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|a7e114ea1e6909685ce49717a2b5b66d8275d419
 system_ext/framework/qcrilhook.jar|d9778a3f8da09bf25c4905fb4e5d0fd7310f1f42
-system_ext/framework/qti-telephony-common.jar|bb3ab85fcc841cb41e7f7c911eecf4de110d09b9
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0683bd5ee5b9d34da4a55fefa515d676c7f8f9a4
 
 # Radio - IMS (system) - from LA.QSSI.14.0.r1-15800-qssi.0
