@@ -184,23 +184,19 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.class_main.sh \
-    init.oppo.fingerprints.rc \
     init.oppo.fingerprints.sh \
-    init.oppo.reserve.rc \
-    init.msm.usb.configfs.rc \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sh \
-    init.target.rc \
+    init.qti.dcvs.sh \
     set_baseband.sh \
-    ueventd.qcom.rc
+    fstab.qcom \
+    init.msm.usb.configfs.rc \
+    init.oppo.fingerprints.rc \
+    init.oppo.reserve.rc \
+    init.r5x.rc \
+    init.target.rc \
+    ueventd.r5x.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -327,6 +323,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
+    init \
     perf \
     usb \
     vibrator \

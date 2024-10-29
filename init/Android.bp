@@ -16,3 +16,75 @@ cc_library_static {
         "system/core/init"
     ]
 }
+
+// fstab
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "fstab.qcom",
+    vendor: true,
+}
+
+// Init configuration files
+
+prebuilt_etc {
+    name: "init.msm.usb.configfs.rc",
+    src: "init.msm.usb.configfs.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.oppo.fingerprints.rc",
+    src: "init.oppo.fingerprints.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.oppo.reserve.rc",
+    src: "init.oppo.reserve.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.r5x.rc",
+    src: "init.r5x.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.r5x.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.r5x.rc",
+    device_specific: true,
+}
+
+// Init scripts
+
+sh_binary {
+    name: "init.qti.dcvs.sh",
+    src: "init.qti.dcvs.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.oppo.fingerprints.sh",
+    src: "init.oppo.fingerprints.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "set_baseband.sh",
+    src: "set_baseband.sh",
+    vendor: true,
+}

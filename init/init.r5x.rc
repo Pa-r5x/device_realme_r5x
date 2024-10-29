@@ -1,0 +1,114 @@
+#
+# Custom r5x-specific init script
+#
+
+on early-init
+    chown system system /sys/kernel/oppo_display/shutdownflag
+    chmod 0666 /sys/kernel/oppo_display/shutdownflag
+    chown system system /proc/touchpanel/oppo_tp_limit_enable
+    chmod 0660 /proc/touchpanel/oppo_tp_limit_enable
+    chown system system /proc/touchpanel/oppo_tp_direction
+    chmod 0660 /proc/touchpanel/oppo_tp_direction
+    chown system system /proc/touchpanel/game_switch_enable
+    chmod 0660 /proc/touchpanel/game_switch_enable
+    chown system system /proc/touchpanel/double_tap_enable
+    chmod 0660 /proc/touchpanel/double_tap_enable
+    chown system system /proc/touchpanel/tp_fw_update
+    chmod 0660 /proc/touchpanel/tp_fw_update
+
+on boot
+   # Touchpanel
+   write /proc/touchpanel/double_tap_enable 1
+
+   # Add for touchscreen firmware update check
+   write /proc/touchpanel/tp_fw_update 1
+
+   write /proc/touchpanel/oppo_tp_limit_enable 0
+
+   # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
+
+on post-fs-data
+  chown root system /dev/block/bootdevice/by-name/rawdump
+  chmod 0660 /dev/block/bootdevice/by-name/rawdump
+
+  chown system system /sys/kernel/oppo_display/dump_info
+  chown system system /sys/kernel/oppo_display/hbm
+  chown system system /sys/kernel/oppo_display/seed
+  chown system system /sys/kernel/oppo_display/dimlayer_bl_en
+  chown system system /sys/kernel/oppo_display/ffl_set
+  chown system system /sys/kernel/oppo_display/dimlayer_hbm
+  chown system system /sys/kernel/oppo_display/force_screenfp
+  chown system system /sys/kernel/oppo_display/notify_fppress
+  chown system system /sys/kernel/oppo_display/aod_light_mode_set
+  chown system system /sys/kernel/oppo_display/cabc
+  chown system system /sys/kernel/oppo_display/video
+  chown system system /sys/kernel/oppo_display/aod_area
+  chown system system /sys/kernel/oppo_display/failsafe
+
+  chmod 0666 /sys/kernel/oppo_display/dump_info
+  chmod 0666 /sys/kernel/oppo_display/hbm
+  chmod 0666 /sys/kernel/oppo_display/seed
+  chmod 0666 /sys/kernel/oppo_display/dimlayer_bl_en
+  chmod 0666 /sys/kernel/oppo_display/ffl_set
+  chmod 0666 /sys/kernel/oppo_display/dimlayer_hbm
+  chmod 0666 /sys/kernel/oppo_display/force_screenfp
+  chmod 0666 /sys/kernel/oppo_display/notify_fppress
+  chmod 0666 /sys/kernel/oppo_display/aod_light_mode_set
+  chmod 0666 /sys/kernel/oppo_display/video
+  chmod 0666 /sys/kernel/oppo_display/aod_area
+  chmod 0666 /sys/kernel/oppo_display/failsafe
+
+  chown system system /sys/kernel/oppo_display/power_status
+  chown system system /sys/kernel/oppo_display/sau_closebl_node
+  chown system system /sys/kernel/oppo_display/esd_status
+  chown system system /sys/kernel/oppo_display/spr
+
+  chmod 0666 /sys/kernel/oppo_display/power_status
+  chmod 0666 /sys/kernel/oppo_display/sau_closebl_node
+  chmod 0666 /sys/kernel/oppo_display/esd_status
+  chmod 0666 /sys/kernel/oppo_display/cabc
+
+  chmod 0644 /data/oppo/multimedia/oppo_display_perf_list.xml
+  chmod 0664 /sys/kernel/oppo_display/spr
+
+  mkdir /mnt/vendor/persist/media 0775 media media
+
+  mkdir /data/hostapd 0770 system wifi
+
+on property:sys.boot_completed=1
+    exec u:r:su:s0 root root -- /system/bin/sh /system/vendor/bin/set_baseband.sh
+
+service charger /system/bin/charger
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+
+on charger
+   start charger
+   start vendor.power_off_alarm
+   start vendor.health-hal-2-0
+
+# NFC
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    override
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on property:ro.boot.product.hardware.sku=nfc_ese
+#vendor/etc/init/init.pn8x.nfc.rc
+    mkdir /data/vendor/nfc 0777 nfc nfc
+    mkdir /data/vendor/nfc/param 0777 nfc nfc
+    chmod 0666 /dev/pn553
+    chown nfc nfc /dev/pn553
+
+#vendor/etc/init/init.pn8x.se.rc
+    mkdir /data/vendor/secure_element 0777 secure_element secure_element
+    chmod 0666 /dev/p73
+    chown secure_element secure_element /dev/p73
+
+    start vendor.nfc_hal_service
