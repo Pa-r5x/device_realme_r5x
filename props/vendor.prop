@@ -142,11 +142,6 @@ persist.vendor.ims.disableQXDMLogs=1
 # Keystore
 ro.hardware.keystore_desede=true
 
-# Media
-vendor.vidc.dec.enable.downscalar=1
-vendor.vidc.enc.disable_bframes=1
-vendor.vidc.enc.disable.pq=true
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf.scroll_opt=true
