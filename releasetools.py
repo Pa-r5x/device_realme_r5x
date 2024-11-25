@@ -75,6 +75,7 @@ def AddImage(info, dir, basename, dest):
 def FullOTA_InstallBegin(info):
   info.script.AppendExtra('ifelse(is_mounted("/system_root"),unmount("/system_root"));')
   info.script.AppendExtra('ifelse(is_mounted("/vendor"),unmount("/vendor"));')
+  info.script.AppendExtra('assert(getprop("ro.boot.super_partition") == "system" || abort("ERROR: This recovery does not support retrofit dynamic partitions."););')
   info.script.AppendExtra('run_program("/system/bin/toybox", "blkdiscard", "/dev/block/bootdevice/by-name/system"); || abort("ERROR: Failed to discard data on system partition.");')
   info.script.AppendExtra('run_program("/system/bin/toybox", "blkdiscard", "/dev/block/bootdevice/by-name/vendor"); || abort("ERROR: Failed to discard data on vendor partition.");')
   info.script.AppendExtra('ui_print("- Flashing super_empty onto system partition...");')
