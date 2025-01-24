@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "SystemUIOverlayR5x",
-    theme: "SystemUIOverlayR5x",
-    vendor: true,
-}

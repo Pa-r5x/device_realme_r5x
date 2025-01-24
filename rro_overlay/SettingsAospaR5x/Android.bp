@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "SettingsAospaR5x",
+    theme: "SettingsAospaR5x",
+    vendor: true,
+}

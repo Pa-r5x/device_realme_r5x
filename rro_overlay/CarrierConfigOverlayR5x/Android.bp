@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "CarrierConfigOverlayR5x",
-    theme: "CarrierConfigOverlayR5x",
-    vendor: true,
-}

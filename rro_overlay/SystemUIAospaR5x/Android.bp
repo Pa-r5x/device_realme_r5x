@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "SystemUIAospaR5x",
+    theme: "SystemUIAospaR5x",
+    vendor: true,
+}
