@@ -4,10 +4,10 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.phone.overlay.realme_r5x">
+    package="com.android.carrierconfig.overlay.realme_r5x">
 
     <overlay
         android:isStatic="true"
-        android:priority="550"
-        android:targetPackage="com.android.phone" />
+        android:priority="800"
+        android:targetPackage="com.android.carrierconfig" />
 </manifest>
