@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "TelephonyOverlayR5x",
-    theme: "TelephonyOverlayR5x",
-    vendor: true,
-}

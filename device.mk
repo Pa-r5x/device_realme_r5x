@@ -232,14 +232,10 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayR5x \
-    TelephonyOverlayR5x \
-    SettingsProviderOverlayR5x \
-    SettingsOverlayR5x \
-    SystemUIOverlayR5x \
-    WifiOverlayR5x \
-    FrameworksOverlayR5x \
-    TetheringConfigOverlayR5x
+    CarrierConfigAospaR5x \
+    SettingsAospaR5x \
+    SystemUIAospaR5x \
+    FrameworksAospaR5x
 
 # Protobuf
 PRODUCT_COPY_FILES += \
@@ -264,6 +260,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     init \
     media \
+    overlay \
     perf \
     usb \
     vibrator \

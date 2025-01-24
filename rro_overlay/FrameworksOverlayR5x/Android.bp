@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "FrameworksOverlayR5x",
-    theme: "FrameworksOverlayR5x",
-    vendor: true,
-}

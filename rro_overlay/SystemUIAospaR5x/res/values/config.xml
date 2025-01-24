@@ -26,20 +26,11 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <resources>
-    <!-- Enable doze mode -->
-    <bool name="doze_display_state_supported">true</bool>
-  
-    <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
-    <bool name="config_show4GForLTE">true</bool>
-
     <!-- Override value to use for proximity sensor.  -->
     <string name="proximity_sensor_type" translatable="false">android.sensor.tp_proximity</string>
 
     <!-- If using proximity_sensor_type, specifies a threshold value to distinguish near and
          far break points. A sensor value less than this is considered "near". -->
     <item name="proximity_sensor_threshold" translatable="false" format="float" type="dimen">5.0</item>
-
-    <!-- Allow devices override audio panel location to the left side -->
-    <bool name="config_audioPanelOnLeftSide">true</bool>
 
 </resources>

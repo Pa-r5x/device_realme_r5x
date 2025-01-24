@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright (c) 2012-2016, The Linux Foundation. All rights reserved
+
+    Not a Contribution.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you
+    may not use this file except in compliance with the License.  You may
+    obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied.  See the License for the specific language governing
+    permissions and limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Boolean indicating if current platform supports BLE peripheral mode -->
+    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
+
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
+
+    <!-- MMS user agent prolfile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false"
+            >http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+
+    <!-- Indicate whether closing the lid causes the device to go to sleep and opening
+         it causes the device to wake up.
+         The default is false. -->
+    <bool name="config_lidControlsSleep">true</bool>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- If true, the screen can be rotated via the accelerometer in all 4
+         rotations as the default behavior. -->
+    <bool name="config_allowAllRotations">true</bool>
+
+    <!-- Boolean indicating if current platform supports HFP inband ringing -->
+    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
+
+    <!-- Enable overlay for all location components. -->
+    <bool name="config_enableNetworkLocationOverlay" translatable="false">false</bool>
+    <string name="config_networkLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
+
+   <!-- Operating volatage for bluetooth controller. 0 by default-->
+   <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3300</integer>
+
+   <!-- The duration (in milliseconds) for the outgoing sms authorization request to timeout.-->
+   <integer name="config_sms_authorization_timeout_ms">15000</integer>
+
+   <!-- Enable SMS authorization support -->
+   <bool name="config_sms_authorization_enabled">true</bool>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">false</bool>
+
+    <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
+    <bool name="config_cleanupUnusedFingerprints">false</bool>
+
+     <!-- Whether to post reset runnable for all clients. Needed for some older
+         vendor fingerprint HAL implementations. -->
+    <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
+
+    <!-- The list of components which should be automatically disabled for a specific device. -->
+    <string-array name="config_deviceDisabledComponents" translatable="false">
+        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
+        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
+    </string-array>
+
+    <!-- The bounding path of the cutout region of the main built-in display.
+         Must either be empty if there is no cutout region, or a string that is parsable by
+         {@link android.util.PathParser}.
+         The path is assumed to be specified in display coordinates with pixel units and in
+         the display's native orientation, with the origin of the coordinate system at the
+         center top of the display.
+         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
+         appended after the path string to interpret coordinates in dp instead of px units.
+         Note that a physical cutout should be configured in pixels for the best results.
+         Example for a 10px x 10px square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
+         Example for a 10dp x 10dp square top-center cutout:
+                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
+         @see https://www.w3.org/TR/SVG/paths.html#PathData
+    -->
+     <string name="config_mainBuiltInDisplayCutout">M -38,0 L -38,56 L 38,56 L 38,0 Z</string>
+
+    <!-- Control whether the always on display mode is enabled by default. This value will be used
+         during initialization when the setting is still null. -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
+    <bool name="config_zramWriteback">true</bool>
+
+    <!-- Whether device needs to wait for Qualcomm MPCTL service to start
+         before setting power profiles on boot. -->
+    <bool name="config_waitForMpctlOnBoot">true</bool>
+
+    <!-- Whether device has screen with higher aspect ratio -->
+    <bool name="config_haveHigherAspectRatioScreen">true</bool>
+
+    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDoze">4</integer>
+
+    <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
+         for debouncing the light sensor.  Different constants are used to debounce the light sensor
+         when adapting to brighter or darker environments.  This parameter controls how quickly
+         brightness changes occur in response to an observed change in light level that exceeds the
+         hysteresis threshold. -->
+    <integer name="config_autoBrightnessBrighteningLightDebounce">4000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">8000</integer>
+
+    <!-- User activity timeout: Maximum screen dim duration in milliseconds.
+         Sets an upper bound for how long the screen will dim before the device goes
+         to sleep when there is no user activity.  The dim duration is subtracted from
+         the overall screen off timeout to determine the screen dim timeout.
+         When the screen dim timeout expires, the screen will dim, shortly thereafter
+         the device will go to sleep.
+         If the screen off timeout is very short, the dim duration may be reduced
+         proportionally.  See config_maximumScreenDimRatio.
+         This value may be zero in which case the screen will not dim before the
+         device goes to sleep.
+    -->
+    <integer name="config_maximumScreenDimDuration">7000</integer>
+
+    <!-- User activity timeout: Maximum screen dim duration as a percentage of screen off timeout.
+         This resource is similar to config_maximumScreenDimDuration but the maximum
+         screen dim duration is defined as a ratio of the overall screen off timeout
+         instead of as an absolute value in milliseconds.  This is useful for reducing
+         the dim duration when the screen off timeout is very short.
+         When computing the screen dim duration, the power manager uses the lesser
+         of the effective durations expressed by config_maximumScreenDimDuration and
+         config_maximumScreenDimRatio.
+         This value must be between 0% and 100%.  If the value is zero, the screen will not
+         dim before the device goes to sleep.
+    -->
+    <fraction name="config_maximumScreenDimRatio">20%</fraction>
+
+    <!-- Fast brightness animation ramp rate in brightness units per second-->
+     <integer name="config_brightness_ramp_rate_fast">180</integer>
+
+    <!-- Slow brightness animation ramp rate in brightness units per second-->
+    <integer translatable="false" name="config_brightness_ramp_rate_slow">60</integer>
+
+    <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
+     <integer name="config_shutdownBatteryTemperature">680</integer>
+
+    <!-- Minimum screen brightness setting allowed by the power manager.
+         The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0</item>
+
+    <!-- Maximum screen brightness allowed by the power manager.
+         The user is forbidden from setting the brightness above this level. -->
+    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
+
+    <!-- Default screen brightness setting.
+         Must be in the range specified by minimum and maximum. -->
+     <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.4</item>
+
+    <!-- Screen brightness used to dim the screen when the user activity
+         timeout expires.  May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+     <integer name="config_screenBrightnessDim">4</integer>
+
+    <!-- The component name, flattened to a string, for the default autofill service
+         to  enabled for an user. This service must be trusted, as it can be activated
+         without explicit consent of the user. If no autofill service with the
+         specified name exists on the device, autofill will be disabled by default. -->
+    <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
+
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Enables or disables fading edges when marquee is enabled in TextView.
+         Off by default, since the framebuffer readback used to implement the
+         fading edges is prohibitively expensive on most GPUs. -->
+    <bool name="config_ui_enableFadingMarquee">true</bool>
+
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">true</bool>
+
+    <!-- Enable Night display, which requires HWC 2.0. -->
+    <bool name="config_nightDisplayAvailable">true</bool>
+
+    <!-- Default color temperature, in Kelvin, to tint the screen when Night display is
+         activated. -->
+    <integer name="config_nightDisplayColorTemperatureDefault">3339</integer>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware for individual layers. -->
+    <bool name="config_setColorTransformAcceleratedPerLayer">true</bool>
+
+    <!-- Maximum color temperature, in Kelvin, supported by Night display.
+         Setting this to track the default color temperature value (currently 6500K). -->
+    <integer name="config_nightDisplayColorTemperatureMax">6500</integer>
+
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">false</bool>
+
+    <!-- Exempt ImsService from privacy (location) indicators -->
+    <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
+
+    <!-- Determines whether the shell features all run on another thread. -->
+    <bool name="config_enableShellMainThread">true</bool>
+
+    <!-- If not empty, sets the AVC codec profile level used for the internal screen recorder.
+         Possible values: 3, 3.1, 3.2, 4, 4.1, 4.2
+    -->
+    <string name="config_screenRecorderAVCProfileLevel" translatable="false">3.1</string>
+
+    <!-- List of comma separated package names for which we the system will not show crash, ANR,
+         etc. dialogs. -->
+    <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
+
+    <!-- Whether to intercept inputs on screen off -->
+    <bool name="config_enableKeyHandler">true</bool>
+
+    <!-- Gestures' key codes. If the gesture is not supported set it to 0. -->
+    <integer name="config_doubleTapKeyCode">143</integer>
+
+    <!-- Default settings for gestures:
+             0 - Disabled
+             1 - Wake
+             2 - Pulse
+             3 - Flashlight
+             4 - Airplane
+             5 - Play/Pause
+             6 - Next
+             7 - Previous
+             8 - Camera
+             9 - Dialer -->
+    <integer name="config_doubleTapDefault">1</integer>
+</resources>

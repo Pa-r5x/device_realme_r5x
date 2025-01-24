@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "CarrierConfigAospaR5x",
+    theme: "CarrierConfigAospaR5x",
+    device_specific: true,
+}
