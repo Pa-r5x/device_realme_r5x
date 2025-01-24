@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "SettingsOverlayR5x",
-    theme: "SettingsOverlayR5x",
-    vendor: true,
-}

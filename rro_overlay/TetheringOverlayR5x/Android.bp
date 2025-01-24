@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "TetheringConfigOverlayR5x",
-    theme: "TetheringConfigOverlayR5x",
-    product_specific: true
-}
