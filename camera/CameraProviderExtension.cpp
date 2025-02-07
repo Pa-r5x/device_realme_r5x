@@ -47,14 +47,12 @@ bool supportsSetTorchModeExt() {
 }
 
 int32_t getTorchDefaultStrengthLevelExt() {
-    return 7;
+    return 80;
 }
 
 int32_t getTorchMaxStrengthLevelExt() {
-    // In our device, both LEDs has same maximum value
-    // so get from one.
-    auto node = kTorchLedPaths[0] + "/" + TORCH_MAX_BRIGHTNESS;
-    return get(node, 0);
+    // 255 (out of 500) is a sane max brightness
+    return 255;
 }
 
 int32_t getTorchStrengthLevelExt() {
