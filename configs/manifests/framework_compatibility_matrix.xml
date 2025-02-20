@@ -595,14 +595,6 @@
             <instance>qccsyshal</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.wifi.wificfr</name>
-        <version>1.0</version>
-        <interface>
-            <name>IWificfr</name>
-            <instance>wificfr</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.media.c2</name>
         <version>1.0</version>
