@@ -37,6 +37,7 @@ vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libsurround_3mic_proc.so
+vendor/lib/libtinycompress.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
@@ -48,6 +49,7 @@ vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libhdmipassthru.so
+vendor/lib64/libtinycompress.so
 
 # Audio ACDB
 vendor/etc/acdbdata/19631/Bluetooth_cal.acdb
