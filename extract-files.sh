@@ -55,11 +55,7 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/bin/hw/android.hardware.health@2.0-service.oppo)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
-            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
-            ;;
-        vendor/lib64/libwvhidl.so|vendor/lib/libsnsdiaglog.so|vendor/lib64/libsnsapi.so|vendor/lib/libsnsapi.so)
+       vendor/lib64/libwvhidl.so|vendor/lib/libsnsdiaglog.so|vendor/lib64/libsnsapi.so|vendor/lib/libsnsapi.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
        vendor/lib/libOPPORectify.so|vendor/lib/libarcsoft_beautyshot_lite_image.so|vendor/lib/libarcsoft_hdr_couple_api.so|vendor/lib/libarcsoft_high_dynamic_range_couple.so|vendor/lib/libarcsoft_picauto.so|vendor/lib/libblur_channel.so|vendor/lib/libthread_blur.so|vendor/lib/libdepthmap.so)
