@@ -89,7 +89,6 @@ service charger /system/bin/charger
 on charger
    start charger
    start vendor.power_off_alarm
-   start vendor.health-hal-2-0
 
 # NFC
 service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service

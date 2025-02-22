@@ -38,6 +38,7 @@ function vendor_imports() {
        "vendor/qcom/common/vendor/display/4.14",
        "vendor/qcom/common/vendor/media-legacy",
        "vendor/qcom/opensource/dataservices",
+       "vendor/qcom/common/system/wfd",
        "vendor/qcom/opensource/data-ipa-cfg-mgr",
 EOF
 }
@@ -67,6 +68,7 @@ function lib_to_package_fixup_vendor_variants() {
             vendor.qti.hardware.qccsyshal@1.0 | \
             vendor.qti.hardware.qccvndhal@1.0 | \
             vendor.qti.hardware.fm@1.0 | \
+            vendor.qti.hardware.wifidisplaysession@1.0 | \
             vendor.qti.ims.callinfo@1.0 | \
             vendor.qti.ims.rcsconfig@1.0 | \
             vendor.qti.ims.rcsconfig@1.1)
