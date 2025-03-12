@@ -2,6 +2,9 @@
 audio.sys.noisy.broadcast.delay=600
 audio.sys.offload.pstimeout.secs=3
 
+# Brightness
+sys.brightness.disable_gamma_conversion=true
+
 # Camera
 camera.disable_zsl_mode=1
 persist.camera.aifb=1
