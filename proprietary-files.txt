@@ -2653,7 +2653,7 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|4ba792ee3234dca4cd7ebbd7b3f9003c800f51b4
 
 # WiFi
-vendor/bin/cnss-daemon
+vendor/bin/cnss-daemon;MODULE_SUFFIX=_r5x;OVERRIDES=cnss-daemon
 
 # WiFi Display (system) - from LA.QSSI.14.0.r1-15100-qssi.0
 system_ext/lib/libmmosal.so|9cfaa2338ce8c803f8c7ca12de271b9ffbbeb737
