@@ -2,6 +2,8 @@
 # Custom r5x-specific init script
 #
 
+import /vendor/etc/init/hw/init.uclamp.rc
+
 on early-init
     chown system system /sys/kernel/oppo_display/shutdownflag
     chmod 0666 /sys/kernel/oppo_display/shutdownflag

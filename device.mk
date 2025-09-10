@@ -154,6 +154,7 @@ PRODUCT_PACKAGES += \
     init.oppo.reserve.rc \
     init.r5x.rc \
     init.target.rc \
+    init.uclamp.rc \
     ueventd.r5x.rc
 
 PRODUCT_COPY_FILES += \
