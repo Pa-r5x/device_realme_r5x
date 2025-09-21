@@ -61,7 +61,7 @@ SOONG_CONFIG_rmnetctl_old_rmnet_data := true
 
 # Display
 TARGET_USES_ION := true
-TARGET_SCREEN_DENSITY := 320
+TARGET_SCREEN_DENSITY := 288
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
