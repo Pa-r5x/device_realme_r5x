@@ -17,11 +17,7 @@
 </hal>
 <hal format="hidl" optional="true">
     <name>android.hardware.gatekeeper</name>
-    <version>1.0-1</version>
-    <interface>
-        <name>IBluetoothSar</name>
-        <instance>default</instance>
-    </interface>
+    <version>1.0</version>
     <interface>
         <name>IGatekeeper</name>
         <instance>default</instance>
