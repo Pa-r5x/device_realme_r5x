@@ -1516,10 +1516,8 @@ vendor/lib64/libwvhidl.so|348366befe739ef1f2c762c119ec5b9453301a44
 vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
+vendor/lib/vendor.qti.hardware.dsp@1.0.so|8fcb647d22144c0ce005eae37e05e786d2b045be
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
-
-# DSP - from RMX2050_11_C.10
-vendor/lib/vendor.qti.hardware.dsp@1.0.so|e553aafebc4b5f2908fc03f29b086cd1261aa454
 
 # FM (system) - from LA.QSSI.14.0.r1-15100-qssi.0
 system_ext/lib64/fm_helium.so|63a119fb67a51136d738c0fa2b65c6713b3ab077
