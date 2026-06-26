@@ -85,8 +85,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
-        <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
     </hal>
@@ -100,8 +100,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient0</fqname>
-        <fqname>@1.0::IUimRemoteServiceClient/uimRemoteClient1</fqname>
+        <fqname>@1.2::IUimRemoteServiceClient/uimRemoteClient0</fqname>
+        <fqname>@1.2::IUimRemoteServiceClient/uimRemoteClient1</fqname>
     </hal>
     <!-- RIL UIM REMOTE SERVER -->
     <hal format="hidl">
@@ -120,8 +120,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::IUimLpa/UimLpa0</fqname>
-        <fqname>@1.0::IUimLpa/UimLpa1</fqname>
+        <fqname>@1.2::IUimLpa/UimLpa0</fqname>
+        <fqname>@1.2::IUimLpa/UimLpa1</fqname>
     </hal>
     <!-- RIL UIM -->
     <hal format="hidl">
@@ -150,7 +150,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
         <transport>hwbinder</transport>
-        <fqname>@2.1::IRTPService/imsrtpservice</fqname>
+        <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
@@ -161,8 +161,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
-        <fqname>@2.3::IQtiRadio/slot1</fqname>
-        <fqname>@2.3::IQtiRadio/slot2</fqname>
+        <fqname>@2.7::IQtiRadio/slot1</fqname>
+        <fqname>@2.7::IQtiRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.fm</name>
@@ -182,8 +182,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
            <transport>hwbinder</transport>
-           <fqname>@1.5::IImsRadio/imsradio0</fqname>
-        <fqname>@1.5::IImsRadio/imsradio1</fqname>
+           <fqname>@1.8::IImsRadio/imsradio0</fqname>
+        <fqname>@1.8::IImsRadio/imsradio1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.qcrilhook</name>
@@ -212,7 +212,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <fqname>@2.2::IFactory/default</fqname>
+        <fqname>@2.3::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.connection</name>
@@ -371,5 +371,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <name>vendor.qti.hardware.qccsyshal</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IQccsyshal/qccsyshal</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IDeviceInfo/deviceinfo</fqname>
     </hal>
 </manifest>

@@ -224,11 +224,6 @@ PRODUCT_PACKAGES += \
     libminijail \
     libminijail.vendor
 
-# Netutils
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.0 \
-    android.system.net.netd@1.1.vendor
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
@@ -271,7 +266,6 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigAospaR5x \
     SettingsAospaR5x \
     SystemUIAospaR5x \
     FrameworksAospaR5x
@@ -301,29 +295,11 @@ TARGET_COMMON_QTI_COMPONENTS := \
     init \
     overlay \
     perf \
+    telephony \
     usb \
     vibrator \
     wfd \
     wlan
-
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.0.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    rild \
-    libjson \
-    librmnetctl
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Sensors
 PRODUCT_PACKAGES += \
