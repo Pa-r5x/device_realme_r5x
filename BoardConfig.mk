@@ -53,13 +53,6 @@ TARGET_NEEDS_RAW10_BUFFER_FIX := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# Data Services
-SOONG_CONFIG_NAMESPACES += rmnetctl
-SOONG_CONFIG_rmnetctl += \
-    old_rmnet_data
-
-SOONG_CONFIG_rmnetctl_old_rmnet_data := true
-
 # Display
 TARGET_USES_ION := true
 TARGET_SCREEN_DENSITY := 288
@@ -177,9 +170,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
-
-# RIL
-ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
