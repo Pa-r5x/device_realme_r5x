@@ -8,7 +8,8 @@ OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/egistec/fingerprint
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -133,7 +134,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.r5x
+    android.hardware.biometrics.fingerprint@2.1-service.r5x \
+    android.hardware.biometrics.fingerprint@2.3-service.rbs
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
