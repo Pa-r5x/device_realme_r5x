@@ -21,9 +21,15 @@ ro.incremental.enable=1
 
 # LMKD
 ro.config.low_ram=false
-ro.lmk.kill_timeout_ms=50
-ro.lmk.filecache_min_kb=153600
 ro.config.per_app_memcg=false
+ro.lmk.filecache_min_kb=153600
+ro.lmk.downgrade_pressure=60
+ro.lmk.kill_timeout_ms=100
+ro.lmk.psi_complete_stall_ms=150
+ro.lmk.swap_free_low_percentage=20
+ro.lmk.swap_util_max=90
+ro.lmk.thrashing_limit=30
+ro.lmk.thrashing_limit_decay=50
 
 # Phantom process monitoring
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
