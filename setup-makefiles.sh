@@ -29,18 +29,47 @@ source "${HELPER}"
 function vendor_imports() {
     cat <<EOF >>"$1"
        "device/realme/r5x",
+       "vendor/qcom/common/vendor/gps-legacy",
        "hardware/qcom/display",
+       "vendor/qcom/common/vendor/qseecomd",
        "hardware/qcom/display/gralloc",
        "hardware/qcom/display/libdebug",
        "vendor/qcom/common/vendor/adreno-r",
+       "vendor/qcom/common/vendor/dsprpcd",
        "vendor/qcom/common/vendor/display/4.14",
-       "vendor/qcom/common/vendor/media-legacy",
+       "vendor/qcom/common/vendor/media/legacy",
        "vendor/qcom/common/vendor/perf",
        "vendor/qcom/common/vendor/wlan",
        "vendor/qcom/opensource/dataservices",
        "vendor/qcom/opensource/data-ipa-cfg-mgr",
+       "vendor/qcom/common/vendor/keymaster",
+       "vendor/qcom/common/system/telephony",
        "vendor/realme/r5x",
 EOF
+}
+
+function lib_to_package_fixup_vendor_variants() {
+    if [ "$2" != "vendor" ]; then
+        return 1
+    fi
+
+    case "$1" in
+            com.qualcomm.qti.dpm.api@1.0 | \
+            com.qualcomm.qti.imscmservice* | \
+            com.qualcomm.qti.uceservice* | \
+            vendor.qti.hardware.fm@1.0)
+            echo "${1}_vendor"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+function lib_to_package_fixup() {
+    lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
+        lib_to_package_fixup_proto_3_9_1 "$1" ||
+        lib_to_package_fixup_vendor_variants "$@"
 }
 
 # Initialize the helper
