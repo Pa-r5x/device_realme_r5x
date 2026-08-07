@@ -5,6 +5,7 @@
 #
 
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
+AB_OTA_UPDATER := false
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -56,6 +57,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
+
+$(call soong_config_set,tinycompress,enable_extended_compress_format,true)
+$(call soong_config_set,tinycompress,loop_compress_read,true)
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -305,8 +309,8 @@ PRODUCT_COPY_FILES += \
 
 # Task Profiles
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/profiles/task_profiles_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
-    $(LOCAL_PATH)/configs/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
+    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
 
 # Thermal
 PRODUCT_PACKAGES += \
