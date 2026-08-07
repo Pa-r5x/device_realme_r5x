@@ -78,7 +78,6 @@ bluetooth.profile.avrcp.controller.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
 bluetooth.profile.gatt.enabled=true
 bluetooth.profile.hfp.ag.enabled=true
-bluetooth.profile.hid.device.enabled=true
 bluetooth.profile.hid.host.enabled=true
 bluetooth.profile.map.server.enabled=true
 bluetooth.profile.opp.enabled=true
@@ -135,7 +134,6 @@ ro.hardware.keystore_desede=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf.scroll_opt=true
 
 # Radio
 persist.dbg.volte_avail_ovr=1

@@ -57,6 +57,26 @@ function lib_to_package_fixup_vendor_variants() {
             com.qualcomm.qti.dpm.api@1.0 | \
             com.qualcomm.qti.imscmservice* | \
             com.qualcomm.qti.uceservice* | \
+            libmmosal | \
+            vendor.qti.hardware.wifidisplaysession@1.0 | \
+            vendor.qti.hardware.radio.ims@* | \
+            vendor.qti.ims.callcapability@1.0 | \
+            vendor.qti.ims.callinfo@1.0 | \
+            vendor.qti.ims.factory* | \
+            vendor.qti.ims.rcsconfig* | \
+            vendor.qti.imsrtpservice@3.0 | \
+            vendor.qti.hardware.mwqemadapter@1.0 | \
+            vendor.qti.hardware.radio.am@1.0 | \
+            vendor.qti.hardware.radio.lpa* | \
+            vendor.qti.hardware.radio.qcrilhook@1.0 | \
+            vendor.qti.hardware.radio.qtiradio* | \
+            vendor.qti.hardware.radio.uim* | \
+            vendor.qti.hardware.radio.uim_remote_client* | \
+            vendor.qti.hardware.radio.uim_remote_server@1.0 | \
+            vendor.qti.latency* | \
+            vendor.qti.hardware.data.* | \
+            vendor.qti.data.* | \
+            vendor.qti.hardware.radio.internal.deviceinfo@1.0 | \
             vendor.qti.hardware.fm@1.0)
             echo "${1}_vendor"
             ;;
