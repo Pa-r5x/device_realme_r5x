@@ -1664,7 +1664,7 @@ vendor/etc/sn100u_pnx_ndi.pnscr
 vendor/etc/sn100u_pnx_pcv.pnscr
 vendor/etc/sn100u_pnx_sst.pnscr
 
-# NFC 
+# NFC
 vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # Peripheral - from LA.UM.9.1.r1-13700-SMxxx0.QSSI13.0
@@ -1746,8 +1746,8 @@ vendor/etc/init/netmgrd.rc|5c592bd2cf775462e147d3def97e99abbac4631e
 vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 vendor/etc/init/qcrild.rc|320b644319182f96e494ea30de26cb52b448f592
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
-vendor/lib/vendor.qti.hardware.mwqemadapter@1.0.so|c1b25322484a0d450d205a7eeffc6258bfddc9c0
 vendor/lib/libqrtr.so|df397c0e144dde033759402c1928bcd958cdf260
+vendor/lib/vendor.qti.hardware.mwqemadapter@1.0.so|c1b25322484a0d450d205a7eeffc6258bfddc9c0
 vendor/lib64/libconfigdb.so|4588957364a36adbd71deeb21a50dc230f464892
 vendor/lib64/libdsi_netctrl.so|ee7ca27e24c6edc642ef1aac47382cff537775ee
 vendor/lib64/liblqe.so|b51a79d2d1532bc6db741423391966484cb4c26d
