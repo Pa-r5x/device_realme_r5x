@@ -133,6 +133,9 @@ drm.service.enabled=true
 # Keystore
 ro.hardware.keystore_desede=true
 
+# Media
+vendor.media.omx=0
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf.scroll_opt=true
