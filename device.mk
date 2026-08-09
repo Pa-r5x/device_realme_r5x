@@ -53,6 +53,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
+$(call soong_config_set,tinycompress,loop_compress_read,true)
+$(call soong_config_set,tinycompress,enable_extended_compress_format,true)
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbluetooth_audio_session
