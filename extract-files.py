@@ -34,7 +34,7 @@ namespace_imports = [
     'hardware/qcom/display/libdebug',
     'vendor/qcom/common/vendor/adreno-r',
     'vendor/qcom/common/vendor/display/4.14',
-    'vendor/qcom/common/vendor/media/legacy',
+    'vendor/qcom/common/vendor/media-legacy',
     'vendor/qcom/common/vendor/perf',
     'vendor/qcom/common/vendor/wlan',
     'vendor/qcom/opensource/dataservices',
